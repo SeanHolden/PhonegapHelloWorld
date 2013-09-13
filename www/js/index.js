@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+
     },
     // Bind Event Listeners
     //
@@ -34,6 +35,19 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL
+        });
+
+        function onSuccess(imageData) {
+            // var image = document.getElementById('myImage');
+            // image.src = "data:image/jpeg;base64," + imageData;
+            alert('got camera');
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

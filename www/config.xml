@@ -2,11 +2,16 @@
 <widget id="com.example.hello" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>HelloWorld</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Hello World FFS!!! sample application that responds to the deviceready event...
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
+    
+<!--     <feature name="http://">
+        <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+    </feature> -->
+    <feature name="http://api.phonegap.com/1.0/camera" />
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
